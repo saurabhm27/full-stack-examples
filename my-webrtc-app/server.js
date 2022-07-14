@@ -17,7 +17,8 @@ const mediasoupHtml = roomTemplate.replace("{CLIENT_TYPE}", "Mediasoup");
 app.get('/', function (req, res) {
   const query = url.parse(req.url, true).query;
   const clientPage = mediasoupHtml
-    .replace("{SFU_HOST}", query?.sfuHost ?? "no1010042068022.corp.adobe.com")
+    // .replace("{SFU_HOST}", query?.sfuHost ?? "no1010042068022.corp.adobe.com")
+    .replace("{SFU_HOST}", "no1010042068022.corp.adobe.com")
     .replace("{SFU_PORT}", query?.sfuPort ?? 5959)
     .replace("{SAMPLING_PERIOD_IN_MS}", samplingPeriodInMs)
     ;
