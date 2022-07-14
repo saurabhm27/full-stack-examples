@@ -175,7 +175,8 @@ export class SfuPeer {
     }
 
     public async connect(tried = 0): Promise<void> {
-        const peerHost = this._peerAddress![0];
+        // const peerHost = this._peerAddress![0];
+        const peerHost = "no1010042068022.corp.adobe.com";
         const peerPort = this._peerAddress![1];
         const address = `ws://${peerHost}:${peerPort}?sfuPeer&peerId=${this._peerId}`;
         if (this.comlink.connected) {

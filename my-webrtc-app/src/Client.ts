@@ -6,8 +6,9 @@ const clientId = appStore.getClientId();
 const userId = appStore.getUserId();
 let initialized = false;
 async function initMediasoup(): Promise<void> {
-    const sfuAddress = appStore.getSfuAddress();
-    const url = `ws://${"no1010042068022.corp.adobe.com"}?roomId=${roomId}&userId=${userId}&clientId=${clientId}`;
+    // const sfuAddress = appStore.getSfuAddress();
+    const sfuAddress = "no1010042068022.corp.adobe.com"
+    const url = `ws://${sfuAddress}?roomId=${roomId}&userId=${userId}&clientId=${clientId}`;
     console.log(`SfuAddress: ${sfuAddress}, websocket url: ${url}`);
     await MediasoupClient.create({
         url,
