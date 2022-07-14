@@ -53,7 +53,7 @@ services:
       - 15000-15100:15000-15100/udp
       - 5959:5959
     environment:
-      - HOSTNAME=localhost
+      - HOSTNAME=no1010042068022.corp.adobe.com
       - RTCMIN_PORT=15000
       - RTCMAX_PORT=15100
       - WEBSOCKET_PORT=5959
@@ -78,7 +78,7 @@ services:
       - 15200-15300:15200-15300/udp
       - 7171:7171
     environment:
-      - HOSTNAME=localhost
+      - HOSTNAME=no1010042068022.corp.adobe.com
       - RTCMIN_PORT=15200
       - RTCMAX_PORT=15300
       - WEBSOCKET_PORT=7171

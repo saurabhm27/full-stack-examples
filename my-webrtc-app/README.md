@@ -35,5 +35,5 @@ You can also just search for `-- ObserveRTC integration --` comment in the whole
     node server.js
 ```
 
-4. Go to http://localhost:9000 in your browser.
+4. Go to http://no1010042068022.corp.adobe.com:9000 in your browser.
 

@@ -203,7 +203,7 @@ export const config = ConfigProcessor.from({
     },
     hostname: {
         doc: 'The hostname of the machine',
-        defaultValue: 'localhost',
+        defaultValue: 'no1010042068022.corp.adobe.com',
         env: 'HOSTNAME',
         arg: 'hostname',
     },
@@ -293,7 +293,7 @@ export const config = ConfigProcessor.from({
     observerInternalAddress: {
         doc: 'The observer internal address inside the network where the observer relies',
         format: "string",
-        defaultValue: "localhost:7080",
+        defaultValue: "no1010042068022.corp.adobe.com:7080",
         env: 'OBSERVER_INTERNAL_ADDRESS',
         arg: 'observerInternalAddress',
     }

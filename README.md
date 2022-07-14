@@ -15,11 +15,11 @@ In terminal, run:
 You can obtain it by typing `ifconfig` in MacOs or Linux, or `ipconfig` in Windows.
 
 
-When containers are running, in your browser go to http://localhost:9000 (open it in two, or three tabs).
+When containers are running, in your browser go to http://no1010042068022.corp.adobe.com:9000 (open it in two, or three tabs).
 
-To see the collected [reports](https://observertc.org/docs/overview/schemas/#reports), check the mongodb at: http://localhost:8081/ (the user is `admin`, the password is `password`).
+To see the collected [reports](https://observertc.org/docs/overview/schemas/#reports), check the mongodb at: http://no1010042068022.corp.adobe.com:8081/ (the user is `admin`, the password is `password`).
 
-To see some SFU metrics calculated by the sfu-montior go to http://localhost:5959/metrics
+To see some SFU metrics calculated by the sfu-montior go to http://no1010042068022.corp.adobe.com:5959/metrics
 
 ## Using Multiple SFUs
 
@@ -29,7 +29,7 @@ Examples of monitoring cascaded SFU environment requires to run multiple, at lea
     SFU_ANNOUNCED_IP={MY_LOCAL_IP_ADDRESS} docker-compose -f docker-compose-cascaded-sfus.yaml up
 ```
 
-In your browser tabs you go to http://localhost:9000/?sfuPort=5959, and http://localhost:9000/?sfuPort=7171.
+In your browser tabs you go to http://no1010042068022.corp.adobe.com:9000/?sfuPort=5959, and http://no1010042068022.corp.adobe.com:9000/?sfuPort=7171.
 
 
 

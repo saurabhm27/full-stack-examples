@@ -17,7 +17,7 @@ const config: ClientMonitor.ClientMonitorConfig = {
         format: "protobuf",
         websocket: {
             urls: [
-                "ws://localhost:7080/samples/myService/my-webrtc-app"
+                "ws://no1010042068022.corp.adobe.com:7080/samples/myService/my-webrtc-app"
             ],
             maxRetries: 3,
         }

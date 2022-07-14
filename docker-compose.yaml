@@ -1,3 +1,4 @@
+version: '2.2'
 services:
   notebooks:
     restart: always
@@ -8,6 +9,8 @@ services:
       - 8888:8888
     volumes:
       - ./my-notebooks:/home/jovyan/work
+    extra_hosts:
+      - "host.docker.internal:host-gateway" 
 
   observer:
     restart: always
@@ -18,7 +21,8 @@ services:
       - MICRONAUT_CONFIG_FILES=/my-config.yaml
     volumes:
       - ./observer-config/config.yaml:/my-config.yaml
-
+    extra_hosts:
+          - "host.docker.internal:host-gateway" 
   mongodb:
     image: mongo:4.2
     hostname: mongodb
@@ -33,9 +37,12 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
-
+    extra_hosts:
+          - "host.docker.internal:host-gateway" 
   mongo-express:
     image: mongo-express
+    extra_hosts:
+      - "host.docker.internal:host-gateway" 
     ports:
       - 8081:8081
     environment:
@@ -51,6 +58,8 @@ services:
 
   mediasoup_sfu:
     restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway" 
     build:
       context: ./mediasoup-sfu
       dockerfile: Dockerfile
@@ -61,7 +70,7 @@ services:
       - 15000-15100:15000-15100/udp
       - 5959:5959
     environment:
-      - HOSTNAME=localhost
+      - HOSTNAME=no1010042068022.corp.adobe.com
       - RTCMIN_PORT=15000
       - RTCMAX_PORT=15100
       - WEBPAGE_PORT=5959
@@ -73,6 +82,8 @@ services:
       - observer
 
   webrtc-app:
+    extra_hosts:
+      - "host.docker.internal:host-gateway" 
     build:
       context: ./my-webrtc-app
       dockerfile: Dockerfile
@@ -82,4 +93,3 @@ services:
     - 9000:9000
     depends_on:
     - observer
-version: '3.3'
